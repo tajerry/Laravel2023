@@ -14,7 +14,7 @@ class NewsController extends Controller
     }
     public function show(int $id){
         return view('news.show', [
-            'news'=>$this->getNews($id)
+            'news'=>$this->getNews('', $id)
         ]);
     }
     public function getAllNews(){
