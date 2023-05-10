@@ -16,7 +16,7 @@ class Controller extends BaseController
         if($id){
             return [
                 'id' => $id,
-                'title' => $faker->jobTitle(),
+                'title' => $faker->titleMale() ,
                 'author' => $faker->userName(),
                 'image' => $faker->imageUrl(200, 170),
                 'status' => $statusList[mt_rand(0,2)],
@@ -27,7 +27,7 @@ class Controller extends BaseController
         $data = [];
         $categoryNews = [];
         $id = 1;
-        for($i = 0; $i < 10; $i++){
+        for($i = 0; $i < 9; $i++){
             $data[] = [
                 'id' => $id++,
                 'title' => $faker->jobTitle(),

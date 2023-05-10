@@ -10,7 +10,7 @@
         </a>
         <img src="{!! $news['image'] !!} " alt="">
         <br>
-        <p>Status :<em><{!! $news['status'] !!} </em></p>
+        <p>Status :<em>{!!$news['status']!!}</em></p>
         <p>Author :<em>{!! $news['author'] !!} </em></p>
         <a href="{!! route('news.category',[
             'category' => $news['category']

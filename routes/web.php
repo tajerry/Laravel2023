@@ -18,7 +18,8 @@ use \App\Http\Controllers\CategoryController as CategoryController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})
+    ->name('home');
 Route::get('/welcome/{name}',function ($name){
     echo 'Добро пожаловать, '.$name;
 } );
@@ -33,8 +34,9 @@ Route::get('/news/{category}', [CategoryController::class, 'showCategory'])
     ->name('news.category');
 
 //Admin routes
-Route::group(['prefix'=>'admin', 'as'=>'admin'],function(){
+Route::group(['prefix'=>'admin', 'as'=>'admin.'],function(){
     Route::resource('categories', AdminCategoryController::class);
     Route::resource('news', AdminNewsController::class);
+
 });
 
