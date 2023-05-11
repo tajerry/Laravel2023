@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 @foreach ($newsList as $news)
 
     <div class="news">
@@ -21,4 +23,4 @@
         <p>{!! $news['description'] !!} </p>
     </div>
 @endforeach
-
+@endsection

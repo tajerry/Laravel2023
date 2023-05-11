@@ -1,5 +1,12 @@
 <header>
-    <div class="container-fluid clearfix ">
-        @yield('content')
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="{!!route('news')!!}" class="navbar-brand d-flex align-items-center">
+                <strong>NewsGB</strong>
+            </a>
+            <button class="navbar-toggler" type="button" >
+                Exit
+            </button>
+        </div>
     </div>
 </header>

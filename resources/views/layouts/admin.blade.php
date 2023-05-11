@@ -34,14 +34,17 @@
 <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <!-- partial -->
+
     <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_sidebar.html -->
         <x-admin.sidebar></x-admin.sidebar>
+
         <!-- partial -->
+
         <div class="main-panel">
-            <x-alert type="danger" message="Error message"/>
-            <x-alert type="success" message="Success message"/>
-            <x-alert type="info" message="Info message"/>
+            <div class="container-fluid clearfix ">
+                @yield('content')
+            </div>
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
             <x-admin.footer></x-admin.footer>
